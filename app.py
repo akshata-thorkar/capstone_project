@@ -6,12 +6,14 @@ import streamlit as st
 st.set_page_config(page_title="Heart Disease Predictor", layout="wide", page_icon="❤️")
 
 # Get the working directory of the script
-working_dir = os.path.dirname(os.path.abspath(__file__))
+#working_dir = os.path.dirname(os.path.abspath(__file__))
 
 # Load the trained heart disease model
-model = pickle.load(open(f'{working_dir}/saved_models/heart_disease_model.sav', 'rb'))
-scaler = pickle.load(open(f'{working_dir}/saved_models/scaler.pkl', 'rb'))
+# model = pickle.load(open(f'{working_dir}/saved_models/heart_disease_model.sav', 'rb'))
+# scaler = pickle.load(open(f'{working_dir}/saved_models/scaler.pkl', 'rb'))
 
+model = pickle.load(open('saved_models/heart_disease_model.sav', 'rb'))
+scaler = pickle.load(open('saved_models/scaler.pkl', 'rb'))
 # Title
 st.title('Heart Disease Prediction using Machine Learning')
 
